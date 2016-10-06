@@ -1,0 +1,14 @@
+{
+  "name": "dependency-injection-jimple-talk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ar-market.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jimple": "^1.4.2"
+  }
+}
