@@ -1,15 +1,9 @@
 const Socket = require('./socket')
-const Cord = require('./cord')
-const Laptop = require('./laptop')
+const LaptopFactory = require('./laptop-factory')
 
 const socket = new Socket('B', 120, 15)
-const cord = new Cord('B')
-const laptop = new Laptop(cord)
+const laptop = LaptopFactory.createLaptop('B')
 
-// alternative:
-// const laptop = new Laptop()
-// laptop.attachCord(cord)
-
-socket.plug(laptop.cord)
+laptop.cord.plugInto(socket)
 
 laptop.powerOn()
