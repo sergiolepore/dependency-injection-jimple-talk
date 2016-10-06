@@ -1,8 +1,8 @@
 
-class TypeBCord
+class Cord
 {
-    constructor () {
-        this.type = 'B'
+    constructor (type) {
+        this.type = type
         this.volts = 0
         this.amps = 0
     }
@@ -17,4 +17,4 @@ class TypeBCord
     }
 }
 
-module.exports = TypeBCord
+module.exports = Cord

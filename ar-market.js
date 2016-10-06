@@ -1,8 +1,8 @@
-const TypeISocket = require('./type-i-socket')
-const UsLaptop = require('./us-laptop')
+const Socket = require('./socket')
+const Laptop = require('./laptop')
 
-const socket = new TypeISocket()
-const laptop = new UsLaptop()
+const socket = new Socket('I', 220, 15)
+const laptop = new Laptop('AR')
 
 socket.plug(laptop.cord)
 

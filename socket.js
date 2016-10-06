@@ -1,10 +1,10 @@
 
-class TypeISocket
+class Socket
 {
-    constructor () {
-        this.type = 'I'
-        this.volts = 220
-        this.amps = 15
+    constructor (type, volts, amps) {
+        this.type = type
+        this.volts = volts
+        this.amps = amps
         this.cord = null
     }
 
@@ -31,4 +31,4 @@ class TypeISocket
     }
 }
 
-module.exports = TypeISocket
+module.exports = Socket
