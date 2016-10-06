@@ -10,8 +10,14 @@ class Laptop
         this.marketSocketTypes = new Map()
         this.cordTypes.set('B', new Cord('B'))
         this.cordTypes.set('I', new Cord('I'))
+        this.cordTypes.set('D', new Cord('D'))
+        this.cordTypes.set('E', new Cord('E'))
+        this.cordTypes.set('H', new Cord('H'))
         this.marketSocketTypes.set('AR', 'I')
         this.marketSocketTypes.set('US', 'B')
+        this.marketSocketTypes.set('FR', 'E')
+        this.marketSocketTypes.set('IL', 'H')
+        // ... WTF!?
 
         this.cord = this.cordTypes.get(
             this.marketSocketTypes.get(market)
@@ -20,7 +26,7 @@ class Laptop
 
     powerOn () {
         if (!this.cord.hasCharge()) {
-            throw new Error('No electricity! Am I plugged on? :(')
+            throw new Error('No electricity! Am I plugged in? :(')
         }
 
         console.log(`Beep-Boop, ${this.brand} ${this.model} running!`)
