@@ -1,12 +1,12 @@
-const Cord = require('./cord')
 
 class Laptop
 {
-    constructor (cord) {
-        this.brand = 'Banana'
-        this.model = 'GrandNaine Pro'
-        this.os = 'grandOS 42 "Uritorco"'
+    constructor (brand, model, os, cord = null) {
+        this.brand = brand
+        this.model = model
+        this.os = os
         this.cord = cord
+        this.location = ''
     }
 
     attachCord (cord) {
@@ -15,10 +15,11 @@ class Laptop
 
     powerOn () {
         if (!this.cord.hasCharge()) {
-            throw new Error('No electricity! Am I plugged on? :(')
+            throw new Error('No electricity! Am I plugged in? :(')
         }
 
         console.log(`Beep-Boop, ${this.brand} ${this.model} running!`)
+        console.log(`Location: ${this.location}`)
         console.log(`${this.os} booting up...`)
     }
 }
