@@ -2,13 +2,9 @@ const Socket = require('./socket')
 const Cord = require('./cord')
 const Laptop = require('./laptop')
 
-const socket = new Socket('B', 120, 15)
-const cord = new Cord('B')
+const socket = new Socket('MARS', 120, 15)
+const cord = new Cord('MARS')
 const laptop = new Laptop(cord)
-
-// alternative:
-// const laptop = new Laptop()
-// laptop.attachCord(cord)
 
 socket.plug(laptop.cord)
 

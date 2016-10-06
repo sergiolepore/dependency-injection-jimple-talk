@@ -2,26 +2,15 @@ const Cord = require('./cord')
 
 class Laptop
 {
-    constructor (market) {
+    constructor (cord) {
         this.brand = 'Banana'
         this.model = 'GrandNaine Pro'
         this.os = 'grandOS 42 "Uritorco"'
-        this.cordTypes = new Map()
-        this.marketSocketTypes = new Map()
-        this.cordTypes.set('B', new Cord('B'))
-        this.cordTypes.set('I', new Cord('I'))
-        this.cordTypes.set('D', new Cord('D'))
-        this.cordTypes.set('E', new Cord('E'))
-        this.cordTypes.set('H', new Cord('H'))
-        this.marketSocketTypes.set('AR', 'I')
-        this.marketSocketTypes.set('US', 'B')
-        this.marketSocketTypes.set('FR', 'E')
-        this.marketSocketTypes.set('IL', 'H')
-        // ... WTF!?
+        this.cord = cord
+    }
 
-        this.cord = this.cordTypes.get(
-            this.marketSocketTypes.get(market)
-        )
+    attachCord (cord) {
+        this.cord = cord
     }
 
     powerOn () {
