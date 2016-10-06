@@ -11,7 +11,7 @@ class UsLaptop
 
     powerOn () {
         if (!this.cord.hasCharge()) {
-            throw new Error('No electricity! Am I plugged on? :(')
+            throw new Error('No electricity! Am I plugged in? :(')
         }
 
         console.log(`Beep-Boop, ${this.brand} ${this.model} running!`)
